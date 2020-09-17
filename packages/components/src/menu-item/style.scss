@@ -4,7 +4,7 @@
 
 	.components-menu-items__item-icon {
 		margin-right: -2px; // This optically balances the icon.
-		margin-left: auto;
+		margin-left: $grid-unit-30;
 		display: inline-block;
 		flex: 0 0 auto;
 	}
@@ -35,7 +35,7 @@
 	align-self: center;
 	margin-right: 0;
 	margin-left: auto;
-	padding-left: $grid-unit-15;
+	padding-left: $grid-unit-30;
 	color: currentColor;
 
 	// Hide the keyboard shortcuts on mobile, because they aren't super-useful
