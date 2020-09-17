@@ -23,12 +23,18 @@
 .components-menu-item__info-wrapper {
 	display: flex;
 	flex-direction: column;
+	margin-right: auto;
 }
 
 .components-menu-item__info {
 	margin-top: $grid-unit-05;
 	font-size: $default-font-size - 1px;
 	color: $gray-700;
+	white-space: normal;
+}
+
+.components-menu-item__item {
+	margin-right: auto;
 }
 
 .components-menu-item__shortcut {
