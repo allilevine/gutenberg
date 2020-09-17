@@ -34,7 +34,10 @@
 }
 
 .components-menu-item__item {
+	white-space: nowrap;
 	margin-right: auto;
+	display: inline-flex;
+	align-items: center;
 }
 
 .components-menu-item__shortcut {
