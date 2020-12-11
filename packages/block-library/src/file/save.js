@@ -5,16 +5,14 @@ import { RichText, useBlockProps } from '@wordpress/block-editor';
 
 export default function save( { attributes } ) {
 	const {
-		id,
 		href,
 		fileName,
 		textLinkHref,
 		textLinkTarget,
 		showDownloadButton,
 		downloadButtonText,
+		fileId,
 	} = attributes;
-
-	const fileId = `wp-block-file--media-${ id }`;
 
 	return (
 		href && (
