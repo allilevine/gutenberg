@@ -49,7 +49,13 @@ function ClipboardToolbarButton( { text, disabled } ) {
 	);
 }
 
-function FileEdit( { attributes, setAttributes, noticeUI, noticeOperations } ) {
+function FileEdit( {
+	attributes,
+	setAttributes,
+	noticeUI,
+	noticeOperations,
+	clientId,
+} ) {
 	const {
 		id,
 		fileName,
@@ -92,6 +98,11 @@ function FileEdit( { attributes, setAttributes, noticeUI, noticeOperations } ) {
 			changeDownloadButtonText( _x( 'Download', 'button label' ) );
 		}
 	}, [] );
+
+	useEffect( () => {
+		// Add a unique fileId to each file block
+		setAttributes( { fileId: `wp-block-file--media-${ clientId }` } );
+	}, [ clientId ] );
 
 	function onSelectFile( newMedia ) {
 		if ( newMedia && newMedia.url ) {
